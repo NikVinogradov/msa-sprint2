@@ -80,9 +80,11 @@ RETURNING id, user_id, hotel_id, promo_code, discount_percent, price, created_at
 
     public async Task<IReadOnlyList<BookingRecord>> ListAsync(string? userId, CancellationToken ct)
     {
-        var sql = userId is null
+        var sql = string.IsNullOrWhiteSpace(userId)
             ? "SELECT id, user_id, hotel_id, promo_code, discount_percent, price, created_at FROM booking ORDER BY created_at DESC"
             : "SELECT id, user_id, hotel_id, promo_code, discount_percent, price, created_at FROM booking WHERE user_id = @user_id ORDER BY created_at DESC";
+
+        Console.WriteLine(sql);
 
         await using var conn = new NpgsqlConnection(_connectionString);
         await conn.OpenAsync(ct);

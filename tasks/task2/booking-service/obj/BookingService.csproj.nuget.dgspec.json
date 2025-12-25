@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj": {}
+    "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj": {
+    "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj",
+        "projectUniqueName": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj",
         "projectName": "BookingService",
-        "projectPath": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj",
+        "projectPath": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\BookingService.csproj",
         "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-service\\obj\\",
+        "outputPath": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

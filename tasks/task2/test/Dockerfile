@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY wait-for-it.sh /usr/local/bin/wait-for-it
 COPY init-fixtures.sql regress.sh ./
+COPY booking.sql regress.sh ./
 
 RUN sed -i 's/\r$//' /app/regress.sh /usr/local/bin/wait-for-it \
  && sed -i '1s/^\xEF\xBB\xBF//' /app/regress.sh \

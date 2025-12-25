@@ -75,7 +75,19 @@ public class MonolithClient
             return null;
         }
 
-        var json = await response.Content.ReadAsStringAsync(ct);
-        return JsonSerializer.Deserialize<string>(json, JsonOptions);
+        var content = await response.Content.ReadAsStringAsync(ct);
+        if (string.IsNullOrWhiteSpace(content))
+        {
+            return null;
+        }
+
+        try
+        {
+            return JsonSerializer.Deserialize<string>(content, JsonOptions);
+        }
+        catch (JsonException)
+        {
+            return content.Trim();
+        }
     }
 }

@@ -38,13 +38,31 @@ public class GrpcBookingService : BookingService.BookingServiceBase
 
     public override async Task<BookingListResponse> ListBookings(BookingListRequest request, ServerCallContext context)
     {
+        var userId = NormalizeUserId(request.UserId);
         var bookings = await _domain.ListBookingsAsync(
-            string.IsNullOrWhiteSpace(request.UserId) ? null : request.UserId,
+            userId,
             context.CancellationToken
         );
 
         var response = new BookingListResponse();
         response.Bookings.AddRange(bookings.Select(b => b.ToGrpc()));
         return response;
+    }
+
+    private static string? NormalizeUserId(string? userId)
+    {
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return null;
+        }
+
+        var trimmed = userId.Trim();
+        if (string.Equals(trimmed, "''", StringComparison.Ordinal)
+            || string.Equals(trimmed, "\"\"", StringComparison.Ordinal))
+        {
+            return null;
+        }
+
+        return userId;
     }
 }
