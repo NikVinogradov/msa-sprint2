@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-history-service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0DB221-FD03-4A0A-AB7C-9B40D5083C99}|BookingHistoryService.csproj|c:\\users\\nikol\\desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-history-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A0DB221-FD03-4A0A-AB7C-9B40D5083C99}|BookingHistoryService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-history-service\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task2\\msa-sprint2\\tasks\\task2\\booking-history-service\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-25T15:41:35.157Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
