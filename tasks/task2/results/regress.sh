@@ -1,5 +1,12 @@
-#!/bin/bash
-set -euo pipefail
+#!/usr/bin/env bash
+set -eu
+(set -o pipefail) 2>/dev/null && set -o pipefail
+
+: "${BOOKING_DB_HOST:=host.docker.internal}"
+: "${BOOKING_DB_PORT:=5433}"
+: "${BOOKING_DB_USER:=booking}"
+: "${BOOKING_DB_PASSWORD:=booking}"
+: "${BOOKING_DB_NAME:=booking}"
 
 echo "🏁 Регрессионный тест до миграции Hotelio"
 
@@ -11,6 +18,9 @@ timeout 2 bash -c "</dev/tcp/${DB_HOST}/${DB_PORT}" \
 # Загрузка фикстур
 echo "🧪 Загрузка фикстур..."
 PGPASSWORD="${DB_PASSWORD}" psql -h "${DB_HOST}" -p "${DB_PORT}" -U "${DB_USER}" "${DB_NAME}" < init-fixtures.sql
+
+# Load booking-service fixtures
+PGPASSWORD="${BOOKING_DB_PASSWORD}" psql -h "${BOOKING_DB_HOST}" -p "${BOOKING_DB_PORT}" -U "${BOOKING_DB_USER}" "${BOOKING_DB_NAME}" < booking.sql
 
 echo "🧪 Выполнение HTTP-тестов..."
 
@@ -101,7 +111,7 @@ echo ""
 echo "Тесты бронирования..."
 
 # 1. Получение всех бронирований
-curl -sSf "${BASE}/api/bookings" | grep -q 'test-user-2' && pass "Все бронирования получены" || fail "Бронирования не получены"
+curl -sSf "${BASE}/api/bookings?userId=''" | grep -q 'test-user-2' && pass "Все бронирования получены" || fail "Бронирования не получены"
 
 # 2. Получение бронирований пользователя
 curl -sSf "${BASE}/api/bookings?userId=test-user-2" | grep -q 'test-user-2' && pass "Бронирования test-user-2 найдены" || fail "Нет бронирований test-user-2"
