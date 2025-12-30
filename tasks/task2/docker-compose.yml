@@ -30,6 +30,74 @@ services:
       - monolith-db-data:/var/lib/postgresql/data
     networks:
       - hotelio-net
+      
+  booking-service:
+    build:
+      context: ./booking-service
+      dockerfile: Dockerfile
+    container_name: booking-service
+    ports:
+      - "9090:9090"
+    environment:
+      ASPNETCORE_URLS: http://0.0.0.0:9090
+      ConnectionStrings__BookingDb: Host=booking-db;Port=5432;Database=booking;Username=booking;Password=booking
+      Monolith__BaseUrl: http://monolith:8080
+      Kafka__BootstrapServers: kafka:9092
+      Kafka__Topic: booking-created
+    depends_on:
+      - booking-db
+      - kafka
+    networks:
+      - hotelio-net
+      
+  booking-db:
+    image: postgres:15
+    container_name: booking-db
+    environment:
+      POSTGRES_USER: booking
+      POSTGRES_PASSWORD: booking
+      POSTGRES_DB: booking
+    ports:
+      - "5433:5432"
+    volumes:
+      - booking-db-data:/var/lib/postgresql/data
+      - ./booking-service/db:/docker-entrypoint-initdb.d
+    networks:
+      - hotelio-net
+      
+  booking-history-service:
+    build:
+      context: ./booking-history-service
+      dockerfile: Dockerfile
+    container_name: booking-history-service
+    ports:
+      - "9091:8080"
+    environment:
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+      ConnectionStrings__HistoryDb: Host=booking-history-db;Port=5432;Database=booking_history;Username=booking_history;Password=booking_history
+      Kafka__BootstrapServers: kafka:9092
+      Kafka__Topic: booking-created
+      Kafka__GroupId: booking-history-service
+    depends_on:
+      - booking-history-db
+      - kafka
+    networks:
+      - hotelio-net
+      
+  booking-history-db:
+    image: postgres:15
+    container_name: booking-history-db
+    environment:
+      POSTGRES_USER: booking_history
+      POSTGRES_PASSWORD: booking_history
+      POSTGRES_DB: booking_history
+    ports:
+      - "5434:5432"
+    volumes:
+      - booking-history-db-data:/var/lib/postgresql/data
+      - ./booking-history-service/db:/docker-entrypoint-initdb.d
+    networks:
+      - hotelio-net
 
   kafka:
     image: confluentinc/cp-kafka:7.2.1
@@ -54,6 +122,8 @@ services:
 
 volumes:
   monolith-db-data:
+  booking-db-data:
+  booking-history-db-data:
 
 networks:
   hotelio-net:

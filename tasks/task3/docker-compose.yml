@@ -8,13 +8,38 @@ services:
     depends_on:
       - booking-subgraph
       - hotel-subgraph
+      - promocode-subgraph
+    networks:
+      - hotelio-net
 
   booking-subgraph:
     build: ./booking-subgraph
     ports:
       - "4001:4001"
+    environment:
+      BOOKING_GRPC_HOST: booking-service
+      BOOKING_GRPC_PORT: 9090
+    networks:
+      - hotelio-net
 
   hotel-subgraph:
     build: ./hotel-subgraph
     ports:
       - "4002:4002"
+    environment:
+      MONOLITH_URL: http://monolith:8080
+    networks:
+      - hotelio-net
+
+  promocode-subgraph:
+    build: ./promocode-subgraph
+    ports:
+      - "4003:4003"
+    environment:
+      MONOLITH_URL: http://monolith:8080
+    networks:
+      - hotelio-net
+
+networks:
+  hotelio-net:
+    external: true

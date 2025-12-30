@@ -1,7 +1,9 @@
 replicaCount: 1
 
+namespace: task4
+
 image:
-  name: booking-service
+  name: task4-booking-service
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -13,6 +15,27 @@ service:
 resources:
 
 livenessProbe:
+  enabled: true
+  httpGet:
+    path: /ping
+    port: 8080
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 3
+  successThreshold: 1
 
 readinessProbe:
+  enabled: true
+  httpGet:
+    path: /feature
+    port: 8080
+  initialDelaySeconds: 10
+  periodSeconds: 5
+  timeoutSeconds: 5
+  failureThreshold: 3
+  successThreshold: 1
+
+environment:
+  ENABLE_FEATURE_X: "true"
 

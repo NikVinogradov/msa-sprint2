@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\services\\bookingdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:services\\bookingdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\grpc\\grpcbookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:grpc\\grpcbookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\protos\\booking.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:protos\\booking.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|c:\\users\\nikol\\desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F694F8D7-5663-42AC-A156-1CDF6A00BD7E}|BookingService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GrpcBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Grpc\\GrpcBookingService.cs",
+              "RelativeDocumentMoniker": "Grpc\\GrpcBookingService.cs",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Grpc\\GrpcBookingService.cs",
+              "RelativeToolTip": "Grpc\\GrpcBookingService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAMwCkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T20:12:51.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Repositories\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\BookingRepository.cs",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Repositories\\BookingRepository.cs",
+              "RelativeToolTip": "Repositories\\BookingRepository.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:39:56.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:05:39.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "booking.proto",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Protos\\booking.proto",
+              "RelativeDocumentMoniker": "Protos\\booking.proto",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Protos\\booking.proto",
+              "RelativeToolTip": "Protos\\booking.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-12-25T15:46:09.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookingDomainService.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Services\\BookingDomainService.cs",
+              "RelativeDocumentMoniker": "Services\\BookingDomainService.cs",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\Services\\BookingDomainService.cs",
+              "RelativeToolTip": "Services\\BookingDomainService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:33:19.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\nikol\\Desktop\\task21\\msa-sprint2\\tasks\\task2\\booking-service\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-25T15:32:13.259Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
